@@ -4,9 +4,20 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="main"{}>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact Me</a>
+            </div>
+            <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+
+        <div class="main" id="home"{}>
             <div class="title-text">
-                <h1>
+                <h1 id="name-heading">
                     SUNNY ZHANG
                 </h1>
             </div>
@@ -36,7 +47,7 @@
             </div>
 
 
-            <div class="aboutme-wrapper">
+            <div class="aboutme-wrapper" id="about">
                 <img class="headshot-img" src="https://media.licdn.com/dms/image/v2/D5603AQF_TF15lTZ9AA/profile-displayphoto-crop_800_800/B56aA0jWYeGUAI-/0/1787588078792?e=1791417600&v=beta&t=u7xJYccrkjKIsHvkwaiuQ9Bq_EsWQcGfepEYalUERY8">
 
                 <div class="aboutmetext-wrapper">
@@ -49,6 +60,218 @@
                     </div>
                 </div>
             </div>
+
+            <div class="work-wrapper" id="work">
+                <h2 class="worktitle-text">
+                    WORK
+                </h2>
+
+                <!--
+                    Timeline: alternates a "timeline-point" with a "timeline-segment".
+                    The first 2 points are real work terms (class "filled"), the next
+                    6 are future co-op cycles (class "future future-1" ... "future-6"),
+                    getting fainter/more dotted the further out they are.
+                    Edit the title/date/desc on each point to update the hover card.
+                -->
+                <div class="timeline">
+                    <div class="timeline-point filled">
+                        <div class="point-card">
+                            <div class="point-card-title">Volunteer</div>
+                            <!-- Swap in the real term dates -->
+                            <div class="point-card-date">2023-2025</div>
+                            <div class="point-card-desc">Summer camp counseler, managed 25+ volunteer teams, and facilitated services</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">MCCC</div>
+                    </div>
+
+                    <div class="timeline-segment"></div>
+
+                    <div class="timeline-point filled">
+                        <div class="point-card">
+                            <div class="point-card-title">Ace Manufacturing</div>
+                            <!-- Swap in the real term dates -->
+                            <div class="point-card-date">Summer 2026</div>
+                            <div class="point-card-desc">Completed design revisions, created designs in AutoCAD, and used power tools for fabrication.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">ACE Manufacturing</div>
+                    </div>
+
+                    <div class="timeline-segment future future-1"></div>
+
+                    <div class="timeline-point future future-1">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 1</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 1</div>
+                    </div>
+
+                    <div class="timeline-segment future future-2"></div>
+
+                    <div class="timeline-point future future-2">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 2</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 2</div>
+                    </div>
+
+                    <div class="timeline-segment future future-3"></div>
+
+                    <div class="timeline-point future future-3">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 3</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 3</div>
+                    </div>
+
+                    <div class="timeline-segment future future-4"></div>
+
+                    <div class="timeline-point future future-4">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 4</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 4</div>
+                    </div>
+
+                    <div class="timeline-segment future future-5"></div>
+
+                    <div class="timeline-point future future-5">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 5</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 5</div>
+                    </div>
+
+                    <div class="timeline-segment future future-6"></div>
+
+                    <div class="timeline-point future future-6">
+                        <div class="point-card">
+                            <div class="point-card-title">Work Term 6</div>
+                            <div class="point-card-date">TBD</div>
+                            <div class="point-card-desc">Details coming once this term is confirmed.</div>
+                        </div>
+                        <div class="point-dot"></div>
+                        <div class="point-label">Term 6</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="projects-wrapper" id="projects">
+                <h2 class="projectstitle-text">
+                    PROJECTS
+                </h2>
+
+
+
+
+
+
+
+                <div class="project-cards">
+                    <div class="project-card">
+                        <img class="project-image" src="images/roomba.jpg">
+
+                        <div class="project-text">
+                            <h3 class="project-title">
+                                Roomba Project
+                            </h3>
+
+                            <div class="project-description">
+                                An obstacle avoiding cleaning robot powered by a Raspberry Pi Pico W
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img class="project-image" src="images/ace.jpg">
+
+                        <div class="project-text">
+                            <h3 class="project-title">
+                                Worked at Ace Manufacturing Inc
+                            </h3>
+
+                            <div class="project-description">
+                                Completed design revisions, created designs in AutoCAD, and used power tools for fabrication 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img class="project-image" src="images/shad.jpg">
+
+                        <div class="project-text">
+                            <h3 class="project-title">
+                                SHAD at the University of Lethbridge 
+                            </h3>
+
+                            <div class="project-description">
+                                Co-designed an AI dashcam for road damage detection, winning 'Best Presentation' and 'Best Prototype'
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactme-wrapper" id="contact">
+                <h2 class="contactmetitle-text">
+                    Contact Me:
+                </h2>
+
+                <div class="contactme-content">
+                    <!-- Swap this src for your own photo when ready -->
+                    <img class="contactme-img" src="images/phoneicon.png">
+
+                    <div class="contactme-links">
+                        <!-- Swap in your real email address -->
+                        <a href="mailto:sunzhang0510@gmail.com" class="contact-btn email-btn">
+                            Email Me
+                        </a>
+
+                        <a href="https://github.com/turt1s"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-btn github-btn2">
+                            Follow on GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sunnyzhang08/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-btn linkedin-btn2">
+                            Connect on LinkedIn
+                        </a>
+
+                        <a href="Sunny_Zhang_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-btn resume-btn2">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

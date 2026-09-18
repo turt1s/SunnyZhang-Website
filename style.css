@@ -1,6 +1,20 @@
+:root {
+  --bg-main: #0F172A;
+  --bg-surface: #1E293B;
+  --bg-deep: #05070D;
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --accent-primary: #06B6D4;
+  --accent-secondary: #6366F1;
+  --accent-highlight: #F59E0B;
+  --border-subtle: #334155;
+  --work-accent: #117864;
+}
+
 html{
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -13,18 +27,87 @@ body{
 
 
 
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2C3E50;
+    padding: 20px 0;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.nav-link{
+    color: #EAEDED;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover{
+    color: #d35400;
+}
+
+.mode-toggle{
+    position: absolute;
+    right: 40px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: 2px solid #EAEDED;
+    border-radius: 50%;
+    color: #EAEDED;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mode-toggle:hover{
+    border-color: #d35400;
+}
+
+#home,
+#about,
+#work,
+#projects,
+#contact{
+    scroll-margin-top: 80px;
+}
+
 .title-text{
     display:flex;
     justify-content: center;
 
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 50px;
+    margin-bottom: 13px;
 
 }
 
 .title-text h1 {
   margin: 0;
-  font-size: 60px; 
+  font-size: 150px; 
+}
+
+.title-text h1 span{
+    display: inline-block;
+    -webkit-text-stroke-color: currentColor;
+    transition: -webkit-text-stroke-width .15s ease;
 }
 
 .button-wrapper{
@@ -33,55 +116,58 @@ body{
 }
 
 .resume-btn{
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
 
-    padding: 8px 16px;
+    padding: 10px 60px;
 
-    border: 2px solid #d35400;
-    border-radius: 8px;
+    border: 3px solid #d35400;
+    border-radius: 10px;
     text-decoration: underline;
     color: #d35400;
     font-weight: bolder;
+    font-size: 20px;
 
 }
 
 
 .github-btn{
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
 
-    padding: 8px 16px;
+    padding: 10px 60px;
     
-    border: 2px solid #C0392B;
-    border-radius: 8px;
+    border: 3px solid #C0392B;
+    border-radius: 10px;
     text-decoration: underline;
     color: #C0392B;
     font-weight: bolder;
+    font-size: 20px;
 }
 
 .linkedin-btn{
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
 
-    padding: 8px 16px;
+    padding: 10px 60px;
 
-    border: 2px solid #7b1d14;
-    border-radius: 8px;
+    border: 3px solid #7b1d14;
+    border-radius: 10px;
     text-decoration: underline;
     color: #7b1d14;
     font-weight: bolder;
+    font-size: 20px;
 }
 
 .aboutme-wrapper{
     display: flex;
     justify-content: center;
 
-    margin: 30px;
+    margin: 75px;
 }
 
 .headshot-img{
-    height: 150px;
+    height: 375px;
     clip-path: circle();
 
     margin: 0px;
@@ -89,29 +175,584 @@ body{
 }
 
 .aboutmetext-wrapper {
-    width: 300px;
+    width: 750px;
     
-    margin: 0px 30px;
+    margin: 0px 75px;
     
 
-    background: #aab7b8;
+    background: #85929E;
 
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .aboutmetitle-text {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 13px;
+    font-size: 75px;
 }
 
 .aboutmemain-text{
     display: flex;
     justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin: 0px 25px 13px;
+    font-size:30px;
+    
+}
 
+/* ---------- Work timeline ---------- */
+
+.work-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 75px;
+}
+
+.worktitle-text{
+    font-size: 60px;
+    margin-bottom: 80px;
+}
+
+.timeline{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px 65px;
+    box-sizing: border-box;
+}
+
+.timeline-segment{
+    flex: 1 1 auto;
+    height: 3px;
+    margin-top: 11px;
+    background: var(--work-accent);
+    align-self: flex-start;
+}
+
+.timeline-segment.future{
+    background: none;
+    border-top: 3px dashed #839094;
+}
+
+.timeline-segment.future-1{ opacity: .75; }
+.timeline-segment.future-2{ opacity: .6; }
+.timeline-segment.future-3{ opacity: .48; }
+.timeline-segment.future-4{ opacity: .36; }
+.timeline-segment.future-5{ opacity: .24; }
+.timeline-segment.future-6{ opacity: .15; }
+
+.timeline-point{
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.point-dot{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--work-accent);
+    border: 3px solid var(--work-accent);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.timeline-point.future .point-dot{
+    background: none;
+    border: 3px dashed #839094;
+}
+
+.timeline-point.future-1 .point-dot{ opacity: .75; }
+.timeline-point.future-2 .point-dot{ opacity: .6; }
+.timeline-point.future-3 .point-dot{ opacity: .48; }
+.timeline-point.future-4 .point-dot{ opacity: .36; }
+.timeline-point.future-5 .point-dot{ opacity: .24; }
+.timeline-point.future-6 .point-dot{ opacity: .15; }
+
+.point-label{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 14px;
+
+    width: 110px;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.timeline-point.future .point-label{
+    color: #839094;
+    font-weight: normal;
+}
+
+.timeline-point.future-1 .point-label{ opacity: .75; }
+.timeline-point.future-2 .point-label{ opacity: .6; }
+.timeline-point.future-3 .point-label{ opacity: .48; }
+.timeline-point.future-4 .point-label{ opacity: .36; }
+.timeline-point.future-5 .point-label{ opacity: .24; }
+.timeline-point.future-6 .point-label{ opacity: .15; }
+
+.point-card{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 22px;
+
+    width: 220px;
+    padding: 16px 18px;
+    box-sizing: border-box;
+
+    background: #85929E;
+    border-radius: 14px;
+    border-top: 4px solid var(--work-accent);
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 10;
+}
+
+.point-card::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: #85929E;
+}
+
+.timeline-point:hover .point-card,
+.timeline-point.active .point-card{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -6px);
+}
+
+.point-card-title{
+    font-size: 17px;
+    font-weight: bolder;
+    margin-bottom: 4px;
+}
+
+.point-card-date{
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.point-card-desc{
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.projectstext-wrapper{
+    display:flex;
+    justify-content: center;
+}
+
+.projectstitle-text{
+    font-size: 60px;
+}
+
+.worktitle-text,
+.projectstitle-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.worktitle-text::before,
+.worktitle-text::after,
+.projectstitle-text::before,
+.projectstitle-text::after {
+    content: "";
+    height: 5px;
+    background:#5D6D7E;
+    flex: 0 1 clamp(1rem, 18vw, 20rem);
+    min-width: 0;
+}
+
+
+.projects-wrapper{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.roombapage-img{
+    height: 100px;
+}
+
+.project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card{
+    width: 380px;
+    background: #85929E;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.project-image{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-text{
+    padding: 20px;
+}
+
+.project-title{
+    margin: 0 0 12px 0;
+    font-size: 26px;
+}
+
+.project-description{
+    margin: 0;
+    font-size: 18px;
+}
+
+.contactme-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 75px;
+}
+
+.contactmetitle-text{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.contactme-content{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.contactme-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.contactme-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-btn{
+    padding: 15px 30px;
+
+    border-radius: 15px;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    border: 4px solid;
+}
+
+.email-btn{
+    border-color: #2874A6;
+    color: #2874A6;
+}
+
+.github-btn2{
+    border-color: #C0392B;
+    color: #C0392B;
+}
+
+.linkedin-btn2{
+    border-color: #7b1d14;
+    color: #7b1d14;
+}
+
+.resume-btn2{
+    border-color: #d35400;
+    color: #d35400;
+}
+
+/* ---------- Dark Mode ---------- */
+
+body.dark-mode{
+    background: linear-gradient(to bottom, var(--bg-surface) 0%, var(--bg-main) 55%, var(--bg-deep) 100%);
+}
+
+body.dark-mode .navbar{
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+body.dark-mode .nav-link{
+    color: var(--text-primary);
+}
+
+body.dark-mode .nav-link:hover{
+    color: var(--accent-primary);
+}
+
+body.dark-mode .mode-toggle{
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
+}
+
+body.dark-mode .mode-toggle:hover{
+    border-color: var(--accent-primary);
+}
+
+body.dark-mode .title-text h1,
+body.dark-mode .aboutmetitle-text,
+body.dark-mode .aboutmemain-text,
+body.dark-mode .worktitle-text,
+body.dark-mode .projectstitle-text,
+body.dark-mode .project-title,
+body.dark-mode .contactmetitle-text{
+    color: var(--text-primary);
+}
+
+body.dark-mode .project-description{
+    color: var(--text-muted);
+}
+
+body.dark-mode .aboutmetext-wrapper,
+body.dark-mode .project-card{
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+}
+
+body.dark-mode .worktitle-text::before,
+body.dark-mode .worktitle-text::after,
+body.dark-mode .projectstitle-text::before,
+body.dark-mode .projectstitle-text::after{
+    background: var(--border-subtle);
+}
+
+body.dark-mode .resume-btn,
+body.dark-mode .resume-btn2{
+    border-color: var(--accent-highlight);
+    color: var(--accent-highlight);
+}
+
+body.dark-mode .github-btn,
+body.dark-mode .github-btn2,
+body.dark-mode .email-btn{
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+body.dark-mode .linkedin-btn,
+body.dark-mode .linkedin-btn2{
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+/* Phone icon is a dark glyph on a transparent/light background;
+   inverting it in dark mode keeps it visible instead of turning
+   it into a near-invisible dark blob on the dark surface. */
+body.dark-mode .contactme-img{
+    filter: invert(1);
+}
+
+body.dark-mode .timeline-segment{
+    background: var(--accent-primary);
+}
+
+body.dark-mode .timeline-segment.future{
+    background: none;
+    border-top-color: var(--border-subtle);
+}
+
+body.dark-mode .point-dot{
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+body.dark-mode .timeline-point.future .point-dot{
+    background: none;
+    border-color: var(--border-subtle);
+}
+
+body.dark-mode .point-label{
+    color: var(--text-primary);
+}
+
+body.dark-mode .timeline-point.future .point-label{
+    color: var(--text-muted);
+}
+
+body.dark-mode .point-card{
+    background: var(--bg-surface);
+    border-top-color: var(--accent-primary);
+    border-left: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+body.dark-mode .point-card::after{
+    border-top-color: var(--bg-surface);
+}
+
+body.dark-mode .point-card-title,
+body.dark-mode .point-card-desc{
+    color: var(--text-primary);
+}
+
+body.dark-mode .point-card-date{
+    color: var(--text-muted);
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 900px){
+    .title-text h1{
+        font-size: 90px;
+    }
+
+    .aboutme-wrapper{
+        flex-direction: column;
+        margin: 50px 30px;
+    }
+
+    .aboutmetext-wrapper{
+        width: 100%;
+        max-width: 600px;
+        margin: 30px 0 0;
+    }
+
+    .headshot-img{
+        height: 260px;
+    }
+
+    .contactme-content{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .mode-toggle{
+        position: static;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        gap: 20px 30px;
+        padding: 0 20px;
+    }
+
+    .nav-link{
+        font-size: 16px;
+    }
+
+    .title-text h1{
+        font-size: 44px;
+    }
+
+    .button-wrapper{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .resume-btn,
+    .github-btn,
+    .linkedin-btn{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    .aboutme-wrapper{
+        margin: 40px 20px;
+    }
+
+    .headshot-img{
+        height: 180px;
+    }
+
+    .aboutmetitle-text{
+        font-size: 44px;
+    }
+
+    .aboutmemain-text{
+        font-size: 18px;
+        margin: 0 15px 13px;
+    }
+
+    .work-wrapper,
+    .projects-wrapper,
+    .contactme-wrapper{
+        margin: 40px 20px;
+    }
+
+    .worktitle-text,
+    .projectstitle-text,
+    .contactmetitle-text{
+        font-size: 36px;
+    }
+
+    .timeline{
+        overflow-x: auto;
+        padding: 0 20px 55px;
+    }
+
+    .point-dot{
+        width: 16px;
+        height: 16px;
+    }
+
+    .point-label{
+        width: 70px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .point-card{
+        width: 160px;
+        padding: 12px 14px;
+    }
+
+    .project-card{
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .contactme-img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .contact-btn{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
 }
